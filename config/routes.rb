@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     get "/guess_a_number" => "params_examples#number_game"
 
     # url segment parameter
-    get "/url_segment/:name" => "params_examples#wildlife"
+    get "/url_segment/:hippo" => "params_examples#wildlife"
+    get "/guess_a_number/:number" => "params_examples#guessing_game"
   end
 
 
