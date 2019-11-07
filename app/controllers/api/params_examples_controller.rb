@@ -29,6 +29,11 @@ class Api::ParamsExamplesController < ApplicationController
     # tell them about it
     render 'numbers.json.jb'
   end
+
+  def wildlife
+    @name = params[:name].upcase
+    render 'wild.json.jb'
+  end
 end
 
 
