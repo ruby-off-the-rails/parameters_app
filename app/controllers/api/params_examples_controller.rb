@@ -34,22 +34,6 @@ class Api::ParamsExamplesController < ApplicationController
     # @name = params[:name].upcase
     render 'wild.json.jb'
   end
-
-  def guessing_game
-    answer = 36
-    # get the user's guess
-    user_guess = params[:number].to_i
-    # see how it compares to 36
-    if user_guess == 36
-      @result = "You win!!"
-    elsif user_guess > 36
-      @result = "too high"
-    elsif user_guess < 36
-      @result = "too low"
-    end
-    # tell them about it
-    render 'numbers.json.jb'
-  end
 end
 
 
