@@ -34,6 +34,11 @@ class Api::ParamsExamplesController < ApplicationController
     # @name = params[:name].upcase
     render 'wild.json.jb'
   end
+
+  def body
+    @course = params[:subject]
+    render 'body_params.json.jb'
+  end
 end
 
 

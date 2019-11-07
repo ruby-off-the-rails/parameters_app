@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
   namespace :api do
+    post "/body_params" => "params_examples#body"
     get "/query_parameter_example_url" => "params_examples#query"
     get "/name_url" => "params_examples#name"
     get "/guess_a_number" => "params_examples#number_game"
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
     # url segment parameter
     get "/url_segment/:hippo" => "params_examples#wildlife"
     get "/guess_a_number/:guess" => "params_examples#number_game"
+
+    # body params
   end
 
 
